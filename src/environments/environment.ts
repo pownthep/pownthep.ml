@@ -11,6 +11,10 @@ export const environment = {
     projectId: "baka-club",
     storageBucket: "baka-club.appspot.com",
     messagingSenderId: "796512472048"
+  },
+  contentful: {
+    spaceId: '55zfyknr6w3w',
+    token: '70cfc13965798847fd4cef58667aaf5f0f786bc1b3bc6afacdf8b80f71e70472'
   }
 };
 

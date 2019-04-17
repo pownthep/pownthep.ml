@@ -1,5 +1,19 @@
-<a [routerLink]="['/home', 'content']">
-  <button>
-    Content
-  </button>
-</a>
+<div class="wrapper-content">
+  <div class="sidebar text-center shadow" style="padding-top: 20px;" id="sidebar">
+    <div *ngIf="posts">
+      <a [routerLink]="['/home', post.sys.id]" *ngFor="let post of posts" class="text-dark"><h5>{{post.fields.title}}</h5></a>
+    </div>
+  </div>
+  <div class="content-container">
+    <router-outlet></router-outlet>
+    <div id="footer" class="text-center">
+        <p>Created using</p> <span id="icons"> 
+          <img src="https://picturepan2.github.io/spectre/img/spectre-logo.svg" alt="">
+          <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="">
+          <img src="https://firebase.google.com/downloads/brand-guidelines/SVG/logo-logomark.svg" alt="">
+          <img src="https://raw.githubusercontent.com/contentful/contentful-java-fullstack/master/assets/contentful-logo-c-only.png" alt="">
+        </span>
+        <p>@Pownthep Laokhunthot</p>
+    </div>
+  </div>
+</div>

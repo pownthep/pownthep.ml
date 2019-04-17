@@ -6,7 +6,7 @@ import { auth } from 'firebase/app';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 
-import { Observable, of } from 'rxjs';
+import { Observable, of, BehaviorSubject } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
 
 @Injectable({
@@ -15,6 +15,12 @@ import { switchMap } from 'rxjs/operators';
 export class AuthService {
 
   user$: Observable<User>;
+  private messageSource = new BehaviorSubject('default message');
+  currentMessage = this.messageSource.asObservable();
+
+  changeMessage(message: string) {
+    this.messageSource.next(message)
+  }
 
   constructor(
       private afAuth: AngularFireAuth,
@@ -59,6 +65,7 @@ export class AuthService {
     await this.afAuth.auth.signOut();
     this.router.navigate(['/']);
   }
+
 
 
 }

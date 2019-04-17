@@ -1,3 +1,15 @@
-<p>
-  content works!
-</p>
+<div *ngIf="post$ | async as post">
+  <h1 class="text-center" style="text-decoration: underline; margin-top: 3vh;">Episode {{post.episode}}: {{ post.title }} </h1> 
+  <img [src]="post.thumbnail.fields.file.url" alt="" class="img-responsive p-centered shadow" style="margin-top: 10px;">
+  <div class="text-center">
+    <time>Published on {{ post.createdAt | date: 'fullDate'  }}</time> <br>
+    <span *ngFor="let tag of post.tags" class="label shadow" style="margin-right: 5px; padding: 5px;">
+      {{ tag }}
+    </span>
+  </div>
+  <div id="body" class="p-centered">
+    <!-- markdown string -->
+    <div [innerHTML]="post.body | mdToHtml" class="inner-body"></div>
+  </div>
+  
+</div>

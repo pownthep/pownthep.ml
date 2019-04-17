@@ -11,10 +11,14 @@ export class AppComponent {
   title = 'blog';
   meme = 'https://memegenerator.net/img/instances/58602367/this-is-a-mothafucking-placeholder.jpg';
   alt = 'Meme of the day';
+  message:string;
+
   constructor(public auth: AuthService, public router: Router) { 
   }
 
   ngOnInit() {
+    this.auth.currentMessage.subscribe(message => this.message = message);
+    this.auth.changeMessage('home');
   }
 
   logout() {

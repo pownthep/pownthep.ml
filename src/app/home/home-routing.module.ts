@@ -4,8 +4,13 @@ import { HomeComponent } from './home/home.component';
 import { ContentComponent } from './content/content.component';
 
 const routes: Routes = [
-  {path: 'home',  component: HomeComponent},
-  {path: 'home/:id',  component: ContentComponent}
+  { 
+    path: 'home',  
+    component: HomeComponent,
+    children: [
+      { path: ':id', component: ContentComponent}
+    ]
+  }
 ];
 
 @NgModule({

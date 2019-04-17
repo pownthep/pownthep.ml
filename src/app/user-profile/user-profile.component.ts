@@ -12,7 +12,9 @@ export class UserProfileComponent implements OnInit {
     
   }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    this.auth.changeMessage("login")
+  }
 
 
 }

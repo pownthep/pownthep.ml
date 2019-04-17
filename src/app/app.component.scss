@@ -1,12 +1,12 @@
 #navbar {
     height: 8vh;
     width: 100%;
-    border-bottom: 1px solid #f1f1fc;
+    //border-bottom: 1px solid #c8c8c9;
     display: grid;
     justify-items: right;
     align-items: center;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
     img {
         height:50px;
         width: 50px;
@@ -30,13 +30,7 @@
     width: 100%;
     padding: 0;
 }
-#footer {
-    border-top: 1px solid #f1f1fc;
-    height: 30vh;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
+
 .none {
     display: none;
 }
