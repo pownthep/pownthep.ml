@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+/* width */
+body {
+
+}
+
+.shadow {
+    box-shadow: 0 0.25rem 1rem #5755d91c;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+	background-color: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    //-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	//border-radius: 2px;
+	background-color: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    //border-radius: 5px;
+	//box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #c1c1c1;
+}
