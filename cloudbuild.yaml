@@ -4,7 +4,7 @@ steps:
   args: ['install']
 # Install functions dependencies
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['installfunctions']
+  args: ['run', 'installfunctions']
 # Build server and webpack
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build2']
