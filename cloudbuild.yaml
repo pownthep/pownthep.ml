@@ -4,10 +4,10 @@ steps:
   args: ['install']
 # Test
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build']
+  args: ['run', 'build2']
 # Build
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['run', 'build2']
+  args: ['run', 'build4']
 # Deploy
 - name: 'gcr.io/$PROJECT_ID/firebase'
-  args: ['deploy']
+  args: ['deploy', '--only', 'hosting']
