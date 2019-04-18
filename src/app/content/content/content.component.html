@@ -1,0 +1,18 @@
+<!-- <div *ngIf="post$ | async as post" id="wrapper">
+  <h1 class="text-center" style="text-decoration: underline;">Episode {{post.episode}}: {{ post.title }} </h1> 
+  <img [src]="post.thumbnail.fields.file.url" alt="" class="img-responsive p-centered shadow">
+  <div class="text-center">
+    <time>Published on {{ post.createdAt | date: 'fullDate'  }}</time> <br>
+    <span *ngFor="let tag of post.tags" class="label shadow">
+      {{ tag }}
+    </span>
+  </div>
+  <div id="body" class="p-centered">
+    <div [innerHTML]="post.body | mdToHtml" class="inner-body"></div>
+    <markdown [src]="src"></markdown>
+  </div>
+  
+</div> -->
+<div id="content">
+  <router-outlet></router-outlet>
+</div>

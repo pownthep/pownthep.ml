@@ -12,7 +12,7 @@ export class AppComponent {
   meme = 'https://memegenerator.net/img/instances/58602367/this-is-a-mothafucking-placeholder.jpg';
   alt = 'Meme of the day';
   message:string;
-
+  markdown = "### Hello world";
   constructor(public auth: AuthService, public router: Router) { 
   }
 

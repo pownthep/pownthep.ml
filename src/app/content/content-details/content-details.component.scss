@@ -1,0 +1,8 @@
+#markdown {
+    padding: 80px;
+
+    @media only screen and (max-width: 768px) {
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+}

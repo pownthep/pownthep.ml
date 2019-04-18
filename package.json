@@ -14,7 +14,7 @@
     "build:ssr": "ng run blog:server && npm run webpack:ssr",
     "webpack:ssr": "webpack --config webpack.server.config.js",
     "serve:ssr": "node dist/blog-webpack/server.js",
-    "build2": "ng build --prod && npm run copy:hosting && npm run build:functions && npm run prerender:ssr",
+    "build2": "rm -rf ./public/* && ng build --prod && npm run copy:hosting && npm run build:functions && npm run prerender:ssr",
     "prerender:ssr": "node dist/blog-webpack/server.js"
   },
   "private": true,
@@ -36,6 +36,7 @@
     "core-js": "^2.5.4",
     "firebase": "^5.9.4",
     "marked": "^0.6.2",
+    "ngx-markdown": "^7.1.5",
     "rxjs": "~6.3.3",
     "spectre.css": "^0.5.8",
     "tslib": "^1.9.0",

@@ -2,7 +2,9 @@
   <div *ngIf="auth.user$ | async; then authenticated else guest">
   </div>
   <ng-template #guest>
+      <a routerLink=""  routerLinkActive="active" class="text-dark"><h5>Home</h5></a>
       <a routerLink="login"  routerLinkActive="none" class="text-dark"><h5>Login</h5></a>
+      <a routerLink="content"  routerLinkActive="active" class="text-dark"><h5>Content</h5></a>
   </ng-template>
   <ng-template #authenticated>
     <div *ngIf="auth.user$ | async as user">
@@ -11,6 +13,5 @@
     </div>
   </ng-template>
 </div>
-
 <router-outlet></router-outlet>
 

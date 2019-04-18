@@ -7,13 +7,15 @@
   <ng-template #guest>
     <div class="authen shadow text-center">
       <h3>Howdy, GUEST</h3>
-      <img src="../assets/user.svg" alt="User profile picture" class="s-circle">
-      <p>Login to get started...</p>
+      <img src="../assets/google-icon.svg" alt="User profile picture" class="s-circle" id="user">
+      <p>Google Auth</p>
       
-      <button class="btn" (click)="auth.googleSignin()">
-        <i class="fa fa-google"></i> Connect Google
+      <button class="btn" >
+        <a (click)="auth.googleSignin()">Sign in</a>
       </button>
-      <a routerLink="/">Continue as guest</a>
+      <button class="btn">
+        <a routerLink="/">Continue as guest</a>
+      </button>
     </div>
   </ng-template>
   

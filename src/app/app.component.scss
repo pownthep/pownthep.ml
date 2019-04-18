@@ -1,36 +1,11 @@
 #navbar {
     height: 8vh;
-    width: 100%;
-    //border-bottom: 1px solid #c8c8c9;
-    display: grid;
-    justify-items: right;
-    align-items: center;
     padding-left: 20px;
-    padding-right: 20px;
-    img {
-        height:50px;
-        width: 50px;
-    }
-}
-#content-wrapper {
-    //min-height: 92vh;
-    width: 100%;
-    padding-left: 10vw;
-    padding-right: 10vw;
-
-    @media only screen and (max-width: 768px) {
-        padding-left: 2vw;
-        padding-right: 2vw;
-    }
-}
-#content {
-    //height: 92vh;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    width: 100%;
-    padding: 0;
 }
 
 .none {
     display: none;
+}
+.active {
+    text-decoration: underline;
 }
