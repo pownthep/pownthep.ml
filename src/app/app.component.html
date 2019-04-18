@@ -2,9 +2,15 @@
   <div *ngIf="auth.user$ | async; then authenticated else guest">
   </div>
   <ng-template #guest>
-      <a routerLink=""  routerLinkActive="active" class="text-dark"><h5>Home</h5></a>
-      <a routerLink="login"  routerLinkActive="none" class="text-dark"><h5>Login</h5></a>
+    <div class="links">
+      <a routerLink="login"  routerLinkActive="active" class="text-dark"><h5>Login</h5></a>
+    </div>
+    <div class="links">
       <a routerLink="content"  routerLinkActive="active" class="text-dark"><h5>Content</h5></a>
+    </div>
+    <div class="links">
+      <a routerLink=""  routerLinkActive="active" class="text-dark"><h5>Home</h5></a>
+    </div>
   </ng-template>
   <ng-template #authenticated>
     <div *ngIf="auth.user$ | async as user">

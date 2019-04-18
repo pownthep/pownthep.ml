@@ -6,6 +6,7 @@ import { ContentComponent } from './content/content.component';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
 import { ContentDetailsComponent } from './content-details/content-details.component';
+import { BrowserTransferStateModule, BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,8 @@ import { ContentDetailsComponent } from './content-details/content-details.compo
   imports: [
     CommonModule,
     ContentRoutingModule,
+    BrowserModule.withServerTransition({ appId: 'blog' }),
+    BrowserTransferStateModule,
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
   ]

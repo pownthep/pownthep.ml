@@ -70,7 +70,7 @@ if (true) {
       process.exit();
   });
 
-} else if (!process.env.FUNCTION_NAME) {
+} else if (false) {
 
   // If we're not in the Cloud Functions environment, spin up a Node server
   const PORT = process.env.PORT || 4000;

@@ -1,3 +1,6 @@
-<div *ngIf="src" id="markdown">
-  <markdown [src]="src"></markdown>
+<div *ngFor="let post of posts$ | async" id="markdown">
+  <markdown [data]="post.body"></markdown>
 </div>
+<!-- <div *ngIf="src | async as data">
+    <markdown [data]="data"></markdown>
+</div> -->
