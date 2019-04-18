@@ -2,12 +2,15 @@ steps:
 # Install
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
-# Test
+# Install functions dependencies
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install']
+# Build server and webpack
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build2']
-# Build
+# Build app and prerender
 - name: 'gcr.io/cloud-builders/npm'
   args: ['run', 'build4']
-# Deploy
+# Deploy to firebase hosting
 - name: 'gcr.io/$PROJECT_ID/firebase'
   args: ['deploy', '--only', 'hosting']

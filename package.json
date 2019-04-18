@@ -17,7 +17,8 @@
     "serve:ssr": "node dist/blog-webpack/server.js",
     "build3": "rm -rf ./public/* && ng build --prod && npm run copy:hosting && npm run build:functions && npm run prerender:ssr",
     "build4": "rm -rf ./public/* && ng build --prod && npm run copy:hosting && npm run prerender:ssr",
-    "prerender:ssr": "node dist/blog-webpack/server.js"
+    "prerender:ssr": "node dist/blog-webpack/server.js",
+    "installfunctions": "cd functions && npm install && cd .."
   },
   "private": true,
   "dependencies": {
