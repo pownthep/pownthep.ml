@@ -1,0 +1,8 @@
+<div id="content-list" [@listStagger]="posts$">
+  <div  *ngFor="let post of posts$ | async" id="post" class="text-center shadow">
+    <a [routerLink]="['/content', post.id]">
+      <img src="{{post.thumbnail}}" alt="" class="img-responsive">
+      <h5>{{post.title}}</h5>
+    </a>
+  </div>
+</div>

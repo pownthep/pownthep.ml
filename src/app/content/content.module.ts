@@ -7,11 +7,14 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MarkdownModule } from 'ngx-markdown';
 import { ContentDetailsComponent } from './content-details/content-details.component';
 import { BrowserTransferStateModule, BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContentListComponent } from './content-list/content-list.component';
 
 @NgModule({
   declarations: [
     ContentComponent,
-    ContentDetailsComponent
+    ContentDetailsComponent,
+    ContentListComponent
   ],
   imports: [
     CommonModule,
@@ -20,6 +23,7 @@ import { BrowserTransferStateModule, BrowserModule } from '@angular/platform-bro
     BrowserTransferStateModule,
     HttpClientModule,
     MarkdownModule.forRoot({ loader: HttpClient }),
+    BrowserAnimationsModule
   ]
 })
 export class ContentModule { }

@@ -1,1 +1,0 @@
-![enter image description here](https://angular.io/assets/images/logos/angular/angular.svg)

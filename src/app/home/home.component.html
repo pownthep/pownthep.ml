@@ -1,11 +1,14 @@
 <div class="wrapper-content">
   <div class="content-container">
-    <div class="content">
-      <img src="https://media.giphy.com/media/l4JyOCNEfXvVYEqB2/giphy.gif" alt="" class="p-centered img-responsive">
-      <img src="https://media.giphy.com/media/3oFzmfW34vBCzs6jTO/giphy.gif" alt="" class="p-centered img-responsive">
+    <div class="content text-center">
+      <h1 *ngIf="!clicked" class="text-pop-up-top" [innerHTML]="text1" (click)="toggle()"></h1>
+      <h1 *ngIf="clicked" class="text-pop-up-top" [innerHTML]="text2" (click)="toggle()"></h1>
     </div>
     <div id="footer" class="text-center">
         <p>Created using</p> <span id="icons"> 
+          <img src="./assets/icons/icon-72x72.png" alt="">
+          <img src="./assets/logo-logomark.svg" alt="">
+          <img src="./assets/spectre-logo.svg" alt="">
         </span>
         <p>@Pownthep Laokhunthot</p>
     </div>

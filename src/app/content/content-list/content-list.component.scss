@@ -1,0 +1,20 @@
+#content-list {
+    display: flex;
+    display: -webkit-flex;
+    //height: 85vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 30px;
+    overflow: auto;
+    #post {
+        flex: 0 0 auto;
+        margin: 15px;
+        img {
+            height: 280px;;
+            width: 320px;;
+        }
+    }
+}

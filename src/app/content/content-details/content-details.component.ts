@@ -5,14 +5,16 @@ import { Meta, Title } from '@angular/platform-browser';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 import { tap, startWith } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { fade, routing } from '../animations';
 
-// The state saved from the server render
+//State from server
 const POSTS = makeStateKey<any>('posts');
 
 @Component({
   selector: 'app-content-details',
   templateUrl: './content-details.component.html',
-  styleUrls: ['./content-details.component.scss']
+  styleUrls: ['./content-details.component.scss'],
+  animations: [fade, routing]
 })
 
 
@@ -23,13 +25,6 @@ export class ContentDetailsComponent implements OnInit {
   constructor(public route: ActivatedRoute, public afs: AngularFirestore, private state: TransferState) { }
 
   ngOnInit() {
-    // this.http.get(this.path+'test.md', {responseType: 'text'}).subscribe(
-    //   data => {
-    //     this.afs.collection('posts').add({
-    //       body: data
-    //     });
-    //   }
-    // );
     const id = this.route.snapshot.paramMap.get('id');
     this.posts$ = this.getPosts(id);
   }
