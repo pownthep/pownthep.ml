@@ -1,11 +1,8 @@
 #navbar {
     height: 8vh;
-    padding-left: 20px;
-}
-.links {
-    display: inline-block; 
-    float: right;
-    margin: 18px;
+    a {
+        margin: 0.8rem;
+    }
 }
 
 .none {
@@ -13,4 +10,5 @@
 }
 .active {
     text-decoration: underline;
+    text-decoration-color: rgb(214, 219, 219);
 }

@@ -40,6 +40,8 @@ a, p {
 }
 a:hover {
 	text-decoration: underline;
+	text-decoration-color: rgb(214, 219, 219);
+
 }
 
 .btn {
@@ -75,6 +77,7 @@ code {
 	font-size: 12pt !important;
 	color: #3b4351 !important;
 	background: #eef0f3 !important;
+	word-break: break-word;
 }
 
 ::-webkit-scrollbar {

@@ -1,4 +1,10 @@
-<div *ngFor="let post of posts$ | async" id="markdown">
+<div *ngIf="posts$ | async as post" id="markdown">
+  <div class="text-center" style="margin-bottom: 20px;">
+    <h1>{{post.title}}: {{post.episode}}</h1>
+    <img src="{{post.thumbnail}}" alt="" class="img-responsive p-centered">
+    <br>
+    <span class="label">{{post.tags}}</span>
+  </div>
   <markdown [data]="post.body"></markdown>
 </div>
 <!-- <div *ngIf="src | async as data">

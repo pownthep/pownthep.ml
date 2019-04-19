@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ParamMap, ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Meta, Title } from '@angular/platform-browser';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
@@ -21,7 +20,7 @@ export class ContentDetailsComponent implements OnInit {
   path = '../assets/markdown/'
   posts$: Observable<any>;
   src: Observable<any>;
-  constructor(public route: ActivatedRoute, public http: HttpClient, public afs: AngularFirestore, private state: TransferState) { }
+  constructor(public route: ActivatedRoute, public afs: AngularFirestore, private state: TransferState) { }
 
   ngOnInit() {
     // this.http.get(this.path+'test.md', {responseType: 'text'}).subscribe(
@@ -31,12 +30,13 @@ export class ContentDetailsComponent implements OnInit {
     //     });
     //   }
     // );
-    this.posts$ = this.getPosts();
+    const id = this.route.snapshot.paramMap.get('id');
+    this.posts$ = this.getPosts(id);
   }
 
-  getPosts() {
-    const exists = this.state.get(POSTS, [] as any);
-    return this.afs.collection('posts').valueChanges()
+  getPosts(id: string) {
+    const exists = this.state.get(POSTS, {} as any);
+    return this.afs.collection('posts').doc(id).valueChanges()
     .pipe(
       tap(list => {
         this.state.set(POSTS, list);

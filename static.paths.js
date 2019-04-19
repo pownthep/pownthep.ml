@@ -1,6 +1,5 @@
 export default [
     '/',
     '/login',
-    '/content/test',
-    '/content/test2',
+    '/content/uok8J9IyJtGqOSJpBEd2'
 ];

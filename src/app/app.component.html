@@ -1,16 +1,10 @@
-<div id="navbar" class="shadow">
+<div id="navbar" class="shadow text-center">
   <div *ngIf="auth.user$ | async; then authenticated else guest">
   </div>
   <ng-template #guest>
-    <div class="links">
-      <a routerLink="login"  routerLinkActive="active" class="text-dark"><h5>Login</h5></a>
-    </div>
-    <div class="links">
-      <a routerLink="content"  routerLinkActive="active" class="text-dark"><h5>Content</h5></a>
-    </div>
-    <div class="links">
-      <a routerLink=""  routerLinkActive="active" class="text-dark"><h5>Home</h5></a>
-    </div>
+    <a style="display:inline-block;" routerLink="" class="text-dark"><h5>Home</h5></a>
+    <a style="display:inline-block;" [routerLink]="['/content', 'uok8J9IyJtGqOSJpBEd2']"  routerLinkActive="active" class="text-dark"><h5>Content</h5></a>
+      <a style="display:inline-block;" routerLink="login"  routerLinkActive="active" class="text-dark"><h5>Login</h5></a>
   </ng-template>
   <ng-template #authenticated>
     <div *ngIf="auth.user$ | async as user">
